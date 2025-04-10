@@ -1,0 +1,25 @@
+import pygame
+from constants import *
+
+print("File is running!")
+
+def main():
+    pygame.init()
+    screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
+    # Game loop
+    while True:
+        #Check for exit events
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                return
+            
+        # Fill screen with black
+        screen.fill("black")
+        
+        # Refresh the display
+        pygame.display.flip()
+    print("Starting Asteroids!")
+    print("Screen width:", SCREEN_WIDTH)
+    print("Screen height:", SCREEN_HEIGHT)
+if __name__ == "__main__":
+    main()
