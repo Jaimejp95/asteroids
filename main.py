@@ -57,6 +57,12 @@ def main():
                 print("Game over!")
                 import sys
                 sys.exit()
+        
+        for asteroid in asteroids:
+            for shot in shots:
+                if asteroid.collides_with(shot):
+                    asteroid.split()
+                    shot.kill()
     
         # Draw everything using group
         screen.fill((0, 0, 0))
